@@ -269,8 +269,8 @@ header .navbar a:hover{
 .steps{
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
- padding: 1rem;
+  gap: 3rem;
+ padding: 10rem;
 }
 .steps .box{
   flex: 1 1 24rem;
@@ -301,7 +301,6 @@ header .navbar a:hover{
   border-radius: .5rem;
   position: relative;
   overflow: hidden;
-  
 }
 
 .gallery .box-container .box img{
@@ -545,4 +544,7 @@ width: 100%;
     width: 100%;
   }
   
+}
+#search_container {
+  position:relative; /* IMPORTANT */
 }

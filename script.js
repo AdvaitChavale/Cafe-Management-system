@@ -27,3 +27,37 @@ function fadeOut(){
   setInterval(loader, 2000);
 }
 window.onload = fadeOut();
+
+/* function autoComplete(){
+  document.addEventListener('DOMContentLoaded', () => {
+    let words = ['hello', 'baby', 'abracadabra', 'accoutrements'];
+    let autocomplete = document.getElementById('autocomplete');
+    let search = document.getElementById('search_');
+  
+    search.addEventListener('keyup', () => {
+      if (search.value.length > 0) {
+        let input = search.value;
+        let suggestions = [];
+  
+        suggestions.push(input);
+  
+        let regex = new RegExp('^' + input + '.*', 'i');
+  
+        for (let i = 0; i < words.length; i++) {
+          if (words[i].match(regex)) {
+            suggestions.push(words[i].slice(input.length));
+            break;
+          }
+        }
+  
+        autocomplete.innerHTML = suggestions.join('');
+      }
+    });
+  
+    search.addEventListener('keydown', (e) => {
+      if (search.value === '' && e.keyboardEvent.keyCode === 8) {
+        autocomplete.innerHTML = '';
+      }
+    });
+  });
+} */

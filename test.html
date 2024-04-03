@@ -8,7 +8,35 @@
     <title class="logo">Foodies ^_^</title>
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .scroll-bar {
+          height: 100%;
+          width:130px;
+          border:1px solid grey;
+          font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
+          overflow: auto;
+ }
+ 
+ ::-webkit-scrollbar {
+ width: 10px; 
+ }
+ 
+ ::-webkit-scrollbar-track {
+ border: 1px solid #bdffe6;
+ border-radius: 8px;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+ background: #bdffe6;  
+ border-radius: 8px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+ background: #a2fcdb;
+ }
+ </style>
 </head>
+
 <body class="">
    
     <div class="container">
@@ -45,49 +73,47 @@
     
     
     <!-- order section starts -->    
-        <div class="list">
+    /*    <div class="list">
           
         </div>
-    </div>
+    </div >
     <div class="card">
         <h1>Card</h1>
         <ul class="listCard">
             <section class="order" id="order">
                 <h1 class="heading"><span>order</span> now </h1>
+            </div>
+            <form action="">
+                
+                <div class="inputBox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="2">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="3">
+                    <input type="number" placeholder="number">
+                   
+                
+                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+                 </div>
+                <input type="submit" value="order now" class="btn">
+            </form>
+        </div> 
+     
+        
+    </section>
+    
+    <!-- order section ends -->
                 
                 <div class="row">
                     <div class="image">
-                        <img src="images/order-img.jpg" alt="">
-                        
-                    </div>
-                    <form action="">
-                        
-                        <div class="inputBox">
-                            <input type="text" placeholder="name">
-                            <input type="email" placeholder="email">
-        
-                        </div>
-        
-                        <div class="inputBox">
-                            <input type="text" placeholder="1">
-                            <input type="number" placeholder="number">
-                            <input type="text" placeholder="2">
-                            <input type="number" placeholder="number">
-                            <input type="text" placeholder="3">
-                            <input type="number" placeholder="number">
-                           
-                        
-                        <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
-                         </div>
-                        <input type="submit" value="order now" class="btn">
-                    </form>
-                </div>
-             
-                
-            </section>
-            
-            <!-- order section ends -->
-        
+                        <img src="images/order-img.jpg" alt="">       
         </ul>
         <div class="checkOut">
             <div class="total">0</div>
@@ -97,14 +123,7 @@
  <!-- footer section start -->
    <section class="footer">
 
-     <div class="share">
-         <a href="https://www.facebook.com/chandanku.kushwaha.5" class="btn">facebook</a>
-         <a href="https://twitter.com/Chandan58732024" class="btn">twitter</a>
-         <a href="https://www.instagram.com/feel_good_fitnes/" class="btn">instagram</a>
-         <a href="https://github.com/chandanlog" class="btn">GitHub</a>
-         <a href="https://www.linkedin.com/in/chandan-kumar-mahto-997497185/" class="btn">linkedin</a>
-     </div>
-
+   
      <h2 class="creadit">created for <span>ECS MiniProject Presentation</span></h2>
 
    </section>

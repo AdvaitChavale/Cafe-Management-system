@@ -10,8 +10,9 @@
     
     <!-- css file -->
     <link rel="stylesheet" href="style.css">
-    
-    <title>food website</title>
+    <link rel="icon" type="image/ico" href="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" />
+    <title class="logo">Foodies ^_^</title>
+  
 </head>
 <body>
     
@@ -54,11 +55,85 @@
             <h3>and finally, enjoy your food</h3>
         </div>
         
-    </section>
-    
-    
-    <!-- order section starts -->
-    <section class="order" id="order">
+        <section class="order" id="order">
+            <h1 class="heading"><span>order</span> now </h1>
+            
+            <div class="row">
+                <div class="image">
+                    <img src="images/order-img.jpg" alt="">
+                </div>
+                <form method="post" id="orderForm" name="orderForm" action="">
+                    <div class="inputBox">
+                        <input type="text" placeholder="Name" name="Username" id="userName" required>
+                        <input type="text"  value="table no.1" name="table no" readonly >
+                        <input type="email" placeholder="email" name="email" id="email" required>
+
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="dishNameInput1" placeholder="Dish Name" name="dish 1">
+                        <input type="number" placeholder="Number" value="1" readonly name="Q1">
+                        <input type="text" id="dishNameInput2" placeholder="Dish Name" name="dish 2">
+                        <input type="number" placeholder="1" value="1" readonly name="Q2">
+                        <input type="text" id="dishNameInput3" placeholder="Dish Name" name="dish 3">
+                        <input type="number" placeholder="Number" value="1" readonly name="Q3">
+                       
+                        <textarea placeholder="Any note" id="note" cols="30" rows="10" name="note"></textarea>
+                        <input type="number" id="priceInput" placeholder="Price" readonly name="Total bill">
+                    
+                    </div>
+                    <input type="submit" value="Order Now" class="btn">
+                </form>
+            </div>
+        </section>
+ <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbxckf0pjZWKDA7tlRH49qRfzc_yRygxRvmOWjPeN6zx3Gux38TIohN0ayd5GnjVwUEJ/exec'
+			const form = document.forms['orderForm']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		 </script> 
+          <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function emailSend(){
+
+	var userName = document.getElementById('Username').value;
+	var dishNameInput1= document.getElementById('dishNameInput1').value;
+    var dishNameInput2= document.getElementById('dishNameInput2').value;
+    var dishNameInput3= document.getElementById('dishNameInput3').value;
+    var priceInput= document.getElementById('priceInput').value;
+	var email = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName +
+	"<br/> dishes " +dishNameInput1 + dishNameInput2 + dishNameInput3+
+    "<br/> Total bill " +  priceInput +
+	"<br/> Email " + email;
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "advaitchavale654@gmail.com",
+    Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
+    To : 'advaitchavale654@gmail.com',
+    From : "advaitchavale654@gmail.com",
+    Subject : "Your order is recieved",
+    Body : messageBody
+}).then(
+  message => {
+  	if(message=='OK'){
+  		swal("Sucessful", "You clicked the button!", "success");
+  	}
+  	else{
+  		swal("Error", "You clicked the button!", "error");
+  	}
+  }
+);
+} 
+</script> -->
+  <!--  <section class="order" id="order">
         <h1 class="heading"><span>order</span> now </h1>
         
         <div class="row">
@@ -75,48 +150,49 @@
                 </div>
 
                 <div class="inputBox">
-                    <input type="text" placeholder="1">
+                    <input type="text" placeholder="dish name"> --> <!--here comes the name of dish-->
+                  <!--  <input type="number" placeholder="number"> --> <!--here add the quantity of dishes-->                
+                  <!--  <input type="text" placeholder="dish name">
                     <input type="number" placeholder="number">
-                    <input type="text" placeholder="2">
-                    <input type="number" placeholder="number">
-                    <input type="text" placeholder="3">
+                    <input type="text" placeholder="dish name">
                     <input type="number" placeholder="number">
                    
                 
                 <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
-                 </div>
+                <input type="number" placeholder="price"> --> <!--here come the price which would be autogenerated -->
+            <!--     </div>
                 <input type="submit" value="order now" class="btn">
             </form>
         </div>
      
         
     </section>
-    
+              -->
     <!-- order section ends -->
 
 
-    <!-- footer section start -->
-   <section class="footer">
+     <!-- footer section start -->
+     <section class="footer">
 
-     <div class="share">
-         <a href="https://www.facebook.com/chandanku.kushwaha.5" class="btn">facebook</a>
-         <a href="https://twitter.com/Chandan58732024" class="btn">twitter</a>
-         <a href="https://www.instagram.com/feel_good_fitnes/" class="btn">instagram</a>
-         <a href="https://github.com/chandanlog" class="btn">GitHub</a>
-         <a href="https://www.linkedin.com/in/chandan-kumar-mahto-997497185/" class="btn">linkedin</a>
-     </div>
-
-     <h2 class="creadit">created for <span>ECS MiniProject Presentation</span></h2>
-
-   </section>
-
-    <!-- footer section ends -->
+        <div class="share">
+            <a href="https://www.facebook.com/chandanku.kushwaha.5" class="btn">facebook</a>
+            <a href="https://twitter.com/Chandan58732024" class="btn">twitter</a>
+            <a href="https://www.instagram.com/feel_good_fitnes/" class="btn">instagram</a>
+            <a href="https://github.com/chandanlog" class="btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/chandan-kumar-mahto-997497185/" class="btn">linkedin</a>
+        </div>
+   
+        <h2 class="creadit">created for <span>ECS MiniProject Presentation</span></h2>
+   
+      </section>
+   
+       <!-- footer section ends -->
     
     <!-- scroll section sterts -->
    
     <!-- scroll top btn -->
     
-    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+    <a href="#order" class="fas fa-angle-up" id="scroll-top"></a>
 
 
     <!-- scroll section ends -->

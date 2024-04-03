@@ -105,7 +105,7 @@ function changeQuantity(key, quantity){
         listCards[key].price = quantity * products[key].price;
     }
     reloadCard();
-}
+} 
 
 window.onscroll = () =>{
     menu.classList.remove('fa-times');

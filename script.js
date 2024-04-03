@@ -28,6 +28,57 @@ function fadeOut(){
 }
 window.onload = fadeOut();
 
+
+// new from here //
+document.addEventListener('DOMContentLoaded', function() {
+  const dishNameInputs = [
+      document.getElementById('dishNameInput1'),
+      document.getElementById('dishNameInput2'),
+      document.getElementById('dishNameInput3')
+    
+  
+  ];
+  const priceInput = document.getElementById('priceInput');
+
+  // Sample list of dishes with their prices
+  const dishes = [
+      { name: "Thali", price: 100 },
+      { name: "Vada Pav", price: 15 },
+      { name: "Aamras", price: 30 },
+      { name: "Fried Rice", price: 60 },
+      { name: "Tea/Coffee", price: 10 },
+      { name: "Misal Pav", price: 50 }
+  ];
+
+  // Function to update price input based on dish name input
+  function updatePriceInput() {
+      let totalPrice = 0;
+      dishNameInputs.forEach(input => {
+          const inputValue = input.value.trim().toLowerCase();
+          if (inputValue) {
+              const matchingDishes = dishes.filter(dish => dish.name.toLowerCase().includes(inputValue));
+              matchingDishes.forEach(matchingDish => {
+                  totalPrice += matchingDish.price;
+              });
+          }
+      });
+      priceInput.value = totalPrice;
+  }
+
+  // Add event listeners to dish name inputs for autofill
+  dishNameInputs.forEach(input => {
+      input.addEventListener('input', updatePriceInput);
+  });
+
+  // Add event listener to form submission
+  document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Here you can handle form submission logic
+      alert(`Form submitted successfully!\nTotal Price: ${priceInput.value}`);
+  });
+});
+
+
 /* function autoComplete(){
   document.addEventListener('DOMContentLoaded', () => {
     let words = ['hello', 'baby', 'abracadabra', 'accoutrements'];

@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('orderForm').addEventListener('submit', function(event) {
       event.preventDefault();
       // Here you can handle form submission logic
-      alert(`Form submitted successfully!\nTotal Price: ${priceInput.value}`);
+      //alert(`Form submitted successfully!\nTotal Price: ${priceInput.value}`);
   });
 });
 

@@ -20,7 +20,7 @@
     <!-- header -->
   
     <header>
-        <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodies ^_^</a>
+        <a href="index.html" class="logo"><i class="fas fa-utensils"></i>food</a>
         
         <div id="menu-bar" class="fas fa-bars"> </div>
         <nav class="navbar">
@@ -62,7 +62,7 @@
                 <div class="image">
                     <img src="images/order-img.jpg" alt="">
                 </div>
-               <!-- <form method="post" id="orderForm" name="orderForm" action="">
+                <form method="post" id="orderForm" name="orderForm" action="">
                     <div class="inputBox">
                         <input type="text" placeholder="Name" name="Username" id="userName" required>
                         <input type="text"  value="table no.1" name="table no" readonly >
@@ -82,29 +82,10 @@
                     
                     </div>
                     <input type="submit" value="Order Now" class="btn">
-                </form> -->
-                <form method="post" id="orderForm" name="orderForm" action="" onsubmit="emailSend(); return false;">
-                    <div class="inputBox">
-                        <input type="text" placeholder="Name" name="Username" id="userName" required>
-                        <input type="text" value="table no.1" name="table no" readonly>
-                        <input type="email" placeholder="email" name="email" id="email" required>
-                    </div>
-                    <div class="inputBox">
-                        <input type="text" id="dishNameInput1" placeholder="Dish Name" name="dish 1">
-                        <input type="number" placeholder="Number" value="1" readonly name="Q1">
-                        <input type="text" id="dishNameInput2" placeholder="Dish Name" name="dish 2">
-                        <input type="number" placeholder="1" value="1" readonly name="Q2">
-                        <input type="text" id="dishNameInput3" placeholder="Dish Name" name="dish 3">
-                        <input type="number" placeholder="Number" value="1" readonly name="Q3">
-                        <textarea placeholder="Any note" id="note" cols="30" rows="10" name="note"></textarea>
-                        <input type="number" id="priceInput" placeholder="Price" readonly name="Total bill">
-                    </div>
-                    <input type="submit" value="Order Now" class="btn">
                 </form>
-                        
             </div>
         </section>
- <!-- <script>
+ <script>
 			const scriptURL = 'https://script.google.com/macros/s/AKfycbxckf0pjZWKDA7tlRH49qRfzc_yRygxRvmOWjPeN6zx3Gux38TIohN0ayd5GnjVwUEJ/exec'
 			const form = document.forms['orderForm']
 		  
@@ -115,9 +96,9 @@
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
 			})
-</script> -->
-           <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-          <script src="smtp.js"></script>
+		 </script> 
+          <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 function emailSend(){
 
@@ -126,7 +107,7 @@ function emailSend(){
     var dishNameInput2= document.getElementById('dishNameInput2').value;
     var dishNameInput3= document.getElementById('dishNameInput3').value;
     var priceInput= document.getElementById('priceInput').value;
-	var userEmail = document.getElementById('email').value;
+	var email = document.getElementById('email').value;
 
 	var messageBody = "Name " + userName +
 	"<br/> dishes " +dishNameInput1 + dishNameInput2 + dishNameInput3+
@@ -136,25 +117,22 @@ function emailSend(){
     Host : "smtp.elasticemail.com",
     Username : "advaitchavale654@gmail.com",
     Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
-    To : userEmail,
-    From : 'advaitchavale654@gmail.com',
+    To : 'advaitchavale654@gmail.com',
+    From : "advaitchavale654@gmail.com",
     Subject : "Your order is recieved",
     Body : messageBody
 }).then(
-    message => {
-            console.log("Email sent successfully");
-            console.log(message);
-            swal("Successful", "Email sent successfully!", "success");
-        }
-    ).catch(
-        error => {
-            console.error("Error sending email:", error);
-            swal("Error", "Failed to send email. Please try again later.", "error");
-        }
-    );
-
+  message => {
+  	if(message=='OK'){
+  		swal("Sucessful", "You clicked the button!", "success");
+  	}
+  	else{
+  		swal("Error", "You clicked the button!", "error");
+  	}
+  }
+);
 } 
-</script> 
+</script> -->
   <!--  <section class="order" id="order">
         <h1 class="heading"><span>order</span> now </h1>
         

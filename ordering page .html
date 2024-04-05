@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
     <!-- css file -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico" href="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" />
+    <link rel="icon" type="image/ico"
+        href="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" />
     <title class="logo">Foodies ^_^</title>
-  
+
 </head>
+
 <body>
-    
-    
+
+
     <!-- header -->
-  
+
     <header>
         <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Foodies ^_^</a>
-        
+
         <div id="menu-bar" class="fas fa-bars"> </div>
         <nav class="navbar">
             <a href="index.html">home</a>
-        
+
             <a href="#order">order</a>
         </nav>
-      
+
     </header>
-    
+
     <!-- header end -->
 
-    
+
     <!-- steps section starts -->
-    
+
     <section class="steps">
-        
+
         <div class="box">
             <img src="images/step-1.jpg" alt="">
             <h3>choose your favorite food</h3>
@@ -54,15 +57,15 @@
             <img src="images/step-4.jpg" alt="">
             <h3>and finally, enjoy your food</h3>
         </div>
-        
+
         <section class="order" id="order">
             <h1 class="heading"><span>order</span> now </h1>
-            
+
             <div class="row">
                 <div class="image">
                     <img src="images/order-img.jpg" alt="">
                 </div>
-               <!-- <form method="post" id="orderForm" name="orderForm" action="">
+                <!-- <form method="post" id="orderForm" name="orderForm" action="">
                     <div class="inputBox">
                         <input type="text" placeholder="Name" name="Username" id="userName" required>
                         <input type="text"  value="table no.1" name="table no" readonly >
@@ -85,7 +88,7 @@
                 </form> -->
                 <form method="post" id="orderForm" name="orderForm" action="" onsubmit="emailSend(); return false;">
                     <div class="inputBox">
-                        <input type="text" placeholder="Name" name="Username" id="userName" required>
+                        <input type="text" placeholder="Name" name="Username" id="Username" required>
                         <input type="text" value="table no.1" name="table no" readonly>
                         <input type="email" placeholder="email" name="email" id="email" required>
                     </div>
@@ -101,10 +104,10 @@
                     </div>
                     <input type="submit" value="Order Now" class="btn">
                 </form>
-                        
+
             </div>
         </section>
- <!-- <script>
+        <!-- <script>
 			const scriptURL = 'https://script.google.com/macros/s/AKfycbxckf0pjZWKDA7tlRH49qRfzc_yRygxRvmOWjPeN6zx3Gux38TIohN0ayd5GnjVwUEJ/exec'
 			const form = document.forms['orderForm']
 		  
@@ -116,46 +119,7 @@
 				.catch(error => console.error('Error!', error.message))
 			})
 </script> -->
-           <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-          <script src="smtp.js"></script>
-<script>
-function emailSend(){
-
-	var userName = document.getElementById('Username').value;
-	var dishNameInput1= document.getElementById('dishNameInput1').value;
-    var dishNameInput2= document.getElementById('dishNameInput2').value;
-    var dishNameInput3= document.getElementById('dishNameInput3').value;
-    var priceInput= document.getElementById('priceInput').value;
-	var userEmail = document.getElementById('email').value;
-
-	var messageBody = "Name " + userName +
-	"<br/> dishes " +dishNameInput1 + dishNameInput2 + dishNameInput3+
-    "<br/> Total bill " +  priceInput +
-	"<br/> Email " + email;
-	Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "advaitchavale654@gmail.com",
-    Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
-    To : userEmail,
-    From : 'advaitchavale654@gmail.com',
-    Subject : "Your order is recieved",
-    Body : messageBody
-}).then(
-    message => {
-            console.log("Email sent successfully");
-            console.log(message);
-            swal("Successful", "Email sent successfully!", "success");
-        }
-    ).catch(
-        error => {
-            console.error("Error sending email:", error);
-            swal("Error", "Failed to send email. Please try again later.", "error");
-        }
-    );
-
-} 
-</script> 
-  <!--  <section class="order" id="order">
+        <!--  <section class="order" id="order">
         <h1 class="heading"><span>order</span> now </h1>
         
         <div class="row">
@@ -173,8 +137,8 @@ function emailSend(){
 
                 <div class="inputBox">
                     <input type="text" placeholder="dish name"> --> <!--here comes the name of dish-->
-                  <!--  <input type="number" placeholder="number"> --> <!--here add the quantity of dishes-->                
-                  <!--  <input type="text" placeholder="dish name">
+        <!--  <input type="number" placeholder="number"> --> <!--here add the quantity of dishes-->
+        <!--  <input type="text" placeholder="dish name">
                     <input type="number" placeholder="number">
                     <input type="text" placeholder="dish name">
                     <input type="number" placeholder="number">
@@ -182,7 +146,7 @@ function emailSend(){
                 
                 <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
                 <input type="number" placeholder="price"> --> <!--here come the price which would be autogenerated -->
-            <!--     </div>
+        <!--     </div>
                 <input type="submit" value="order now" class="btn">
             </form>
         </div>
@@ -190,45 +154,53 @@ function emailSend(){
         
     </section>
               -->
-    <!-- order section ends -->
+        <!-- order section ends -->
 
 
-     <!-- footer section start -->
-     <section class="footer">
+        <!-- footer section start -->
+
+
+        <!-- footer section ends -->
+
+        <!-- scroll section sterts -->
+
+        <!-- scroll top btn -->
+
+        <a href="#order" class="fas fa-angle-up" id="scroll-top"></a>
+
+
+        <!-- scroll section ends -->
+
+        <!-- loader -->
+
+        <div class="loader-container">
+            <img src="images/loader.gif" alt="">
+        </div>
+
+
+
+
+        <!-- js file link -->
+
+    </section>
+    <section class="footer">
 
         <div class="share">
-            <a href="https://www.facebook.com/chandanku.kushwaha.5" class="btn">facebook</a>
-            <a href="https://twitter.com/Chandan58732024" class="btn">twitter</a>
-            <a href="https://www.instagram.com/feel_good_fitnes/" class="btn">instagram</a>
-            <a href="https://github.com/chandanlog" class="btn">GitHub</a>
-            <a href="https://www.linkedin.com/in/chandan-kumar-mahto-997497185/" class="btn">linkedin</a>
+            <a href="" class="btn">facebook</a>
+            <a href="" class="btn">twitter</a>
+            <a href="" class="btn">instagram</a>
+            <a href="" class="btn">GitHub</a>
+            <a href="" class="btn">linkedin</a>
         </div>
-   
+
         <h2 class="creadit">created for <span>ECS MiniProject Presentation</span></h2>
-   
-      </section>
-   
-       <!-- footer section ends -->
-    
-    <!-- scroll section sterts -->
-   
-    <!-- scroll top btn -->
-    
-    <a href="#order" class="fas fa-angle-up" id="scroll-top"></a>
+
+    </section>
 
 
-    <!-- scroll section ends -->
-
-    <!-- loader -->
-
-    <div class="loader-container">
-        <img src="images/loader.gif" alt="">
-    </div>
-
-
-
-
-    <!-- js file link -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -112,3 +112,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 } */
+
+function emailSend(){
+
+	var userName = document.getElementById('Username').value;
+	var dishNameInput1= document.getElementById('dishNameInput1').value;
+    var dishNameInput2= document.getElementById('dishNameInput2').value;
+    var dishNameInput3= document.getElementById('dishNameInput3').value;
+    var priceInput= document.getElementById('priceInput').value;
+	var userEmail = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName +
+	"<br/> dishes " +dishNameInput1 + dishNameInput2 + dishNameInput3+
+    "<br/> Total bill " +  priceInput +
+	"<br/> Email " + email;
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "advaitchavale654@gmail.com",
+    Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
+    To : userEmail,
+    From : "advaitchavale654@gmail.com",
+    Subject : "Your order is recieved",
+    Body : messageBody
+}).then(
+    message => {
+            console.log("Email sent successfully");
+            console.log(message);
+            swal("Successful", "Email sent successfully!", "success");
+        }
+    ).catch(
+        error => {
+            console.error("Error sending email:", error);
+            swal("Error", "Failed to send email. Please try again later.", "error");
+        }
+    );
+}

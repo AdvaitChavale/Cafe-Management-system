@@ -394,7 +394,7 @@ header .navbar a:hover{
 .order .row .image img{
 height: 100%;
 width: 100%;
-object-fit: cover;
+object-fit: contain;
 border-radius: .5rem;
 
 }
@@ -407,6 +407,13 @@ border-radius: .5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: auto;
+}
+#Q{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: auto;
 }
 .order .row form .inputBox input,.order .row form textarea {
 padding: 1rem;
@@ -430,6 +437,30 @@ height: 15rem;
 
 .order .row form .btn:hover{
   background: var(--red);
+}
+
+/* Reset default list styles */
+ul {
+  list-style: none;
+}
+
+/* Style for the lists */
+.list {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  margin-top: 5px; /* Add margin to separate lists */
+}
+
+/* Style for list items */
+.list-items {
+  padding: 10px 5px;
+  cursor: pointer; /* Move cursor style here */
+}
+
+/* Hover effect for list items */
+.list-items:hover {
+  background-color: #dddddd;
 }
 
 .footer{

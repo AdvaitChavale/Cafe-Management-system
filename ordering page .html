@@ -11,8 +11,17 @@
 
     <!-- css file -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/ico"
-        href="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" />
+    <link rel="icon" type="image/ico" href="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "TegzttisKpoRMv3X6",
+      });
+   })();
+    </script>
     <title class="logo">Foodies ^_^</title>
 
 </head>
@@ -63,30 +72,33 @@
 
             <div class="row">
                 <div class="image">
-                    <img src="images/order-img.jpg" alt="">
+                    <img src="https://img.freepik.com/premium-vector/yellow-chef-hat-logo-illustration-isolated-white-background_691771-203.jpg" alt="">
                 </div>
-                <!-- <form method="post" id="orderForm" name="orderForm" action="">
+                <form method="post" id="orderForm" name="orderForm" action="">
                     <div class="inputBox">
-                        <input type="text" placeholder="Name" name="Username" id="userName" required>
-                        <input type="text"  value="table no.1" name="table no" readonly >
-                        <input type="email" placeholder="email" name="email" id="email" required>
+                        <input type="text" placeholder="Name" name="userName" id="userName" required>
+                        <input type="text"  value="table no.1" name="tableNo" id="tableNo" readonly >
+                        <input type="email" placeholder="Email" name="email" id="email" required>
 
                     </div>
                     <div class="inputBox">
-                        <input type="text" id="dishNameInput1" placeholder="Dish Name" name="dish 1">
-                        <input type="number" placeholder="Number" value="1" readonly name="Q1">
-                        <input type="text" id="dishNameInput2" placeholder="Dish Name" name="dish 2">
-                        <input type="number" placeholder="1" value="1" readonly name="Q2">
-                        <input type="text" id="dishNameInput3" placeholder="Dish Name" name="dish 3">
-                        <input type="number" placeholder="Number" value="1" readonly name="Q3">
-                       
+                        <input type="text" id="dishNameInput1" placeholder="Dish Name" name="dishNameInput1">
+                        <ul class="list list-1"></ul>
+                        <!-- <input type="number" id="Q"placeholder="Number" value="1" readonly name="Q1"> -->
+                        <input type="text" id="dishNameInput2" placeholder="Dish Name" name="dishNameInput2">
+                        <ul class="list list-2"></ul>
+                        <!-- <input type="number" id="Q" placeholder="1" value="1" readonly name="Q2">                       -->
+                        <input type="text" id="dishNameInput3" placeholder="Dish Name" name="dishNameInput3">
+                        <ul class="list list-3"></ul>                                  
+                        <input type="number" id="Q" placeholder="Number" value="1" readonly name="defaultQuantity">                        
                         <textarea placeholder="Any note" id="note" cols="30" rows="10" name="note"></textarea>
-                        <input type="number" id="priceInput" placeholder="Price" readonly name="Total bill">
-                    
+                        <input type="number" id="priceInput" placeholder="Price" readonly name="priceInput">
+                       
                     </div>
-                    <input type="submit" value="Order Now" class="btn">
-                </form> -->
-                <form method="post" id="orderForm" name="orderForm" action="" onsubmit="emailSend(); return false;">
+                    <input type="submit" value="Order Now" class="btn" onclick="sendMail()">
+                </form> 
+            
+                <!-- <form method="post" id="orderForm" name="orderForm" action="" onsubmit="emailSend(); return false;">
                     <div class="inputBox">
                         <input type="text" placeholder="Name" name="Username" id="Username" required>
                         <input type="text" value="table no.1" name="table no" readonly>
@@ -103,11 +115,11 @@
                         <input type="number" id="priceInput" placeholder="Price" readonly name="Total bill">
                     </div>
                     <input type="submit" value="Order Now" class="btn">
-                </form>
+                </form> -->
 
             </div>
         </section>
-        <!-- <script>
+<script>
 			const scriptURL = 'https://script.google.com/macros/s/AKfycbxckf0pjZWKDA7tlRH49qRfzc_yRygxRvmOWjPeN6zx3Gux38TIohN0ayd5GnjVwUEJ/exec'
 			const form = document.forms['orderForm']
 		  
@@ -118,7 +130,7 @@
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
 			})
-</script> -->
+</script> 
         <!--  <section class="order" id="order">
         <h1 class="heading"><span>order</span> now </h1>
         

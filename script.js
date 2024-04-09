@@ -144,11 +144,11 @@ function sendMail(){
 //     "<br/> Total bill " +  priceInput +
 // 	"<br/> Email " + email;
 // 	Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "advaitchavale654@gmail.com",
-//     Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
+//     Host : "\",
+//     Username : "",
+//     Password : "",
 //     To : userEmail,
-//     From : "advaitchavale654@gmail.com",
+//     From : "",
 //     Subject : "Your order is recieved",
 //     Body : messageBody
 // }).then(

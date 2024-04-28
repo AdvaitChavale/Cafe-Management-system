@@ -390,6 +390,7 @@ header .navbar a:hover{
 }
 .order .row .image{
   flex: 1 1 30rem;
+  
 }
 .order .row .image img{
 height: 100%;

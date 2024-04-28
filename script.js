@@ -42,12 +42,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Sample list of dishes with their prices
   const dishes = [
-      { name: "Thali", price: 100 },
-      { name: "Vada Pav", price: 15 },
-      { name: "Aamras", price: 30 },
-      { name: "Fried Rice", price: 60 },
-      { name: "Tea/Coffee", price: 10 },
-      { name: "Misal Pav", price: 50 }
+    { name: "Veg Thali", price: 100 },
+    { name: "Vada Pav", price: 15 },
+    { name: "Aamras", price: 30 },
+    { name: "Fried Rice", price: 60 },
+    { name: "Tea/Coffee", price: 10 },
+    { name: "Vada", price: 10 },
+    { name: "Samosa pav", price: 15 },
+    { name: "Bread Pattice", price: 20 },
+    { name: "Noodles", price: 80 },
+    { name: "Veg Pizza", price: 90 },
+    { name: "Veg Burger", price: 40 },
+    { name: "Kande Pohe", price: 20 },
+    { name: "Sabudana Khichadi", price: 25 },
+    { name: "Momos", price: 60 },
+    { name: "Veg Frankie", price: 30 },
+    { name: "Misal Pav", price: 50 },
   ];
 
   // Function to update price input based on dish name input
@@ -144,11 +154,11 @@ function sendMail(){
 //     "<br/> Total bill " +  priceInput +
 // 	"<br/> Email " + email;
 // 	Email.send({
-//     Host : "\",
-//     Username : "",
-//     Password : "",
+//     Host : "smtp.elasticemail.com",
+//     Username : "advaitchavale654@gmail.com",
+//     Password : "72A4567F0346FB7A5D90F024FED9A72EFBBE",
 //     To : userEmail,
-//     From : "",
+//     From : "advaitchavale654@gmail.com",
 //     Subject : "Your order is recieved",
 //     Body : messageBody
 // }).then(
@@ -223,18 +233,26 @@ function sendMail(){
 // }
 
 
+
+
 let names = [
   "Misal Pav",
   "Samosa Pav",
   "Vada Pav",
   "Fried Rice",
   "Noodles",
-  "Thali",
-  "Sandwich",
-  "Pizza",
+  "Veg Thali",
+  "Veg Sandwich",
+  "Veg Pizza",
   "Tea",
   "Coffee",
   "Aamras",
+  "Burger",
+  "Bread Pattice",
+  "Kande Pohe",
+  "Sabudana Khichadi",
+  "Momos",
+  "Veg Frankie",
 ];
 // Sort names in ascending order
 let sortedNames = names.sort();

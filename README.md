@@ -1,4 +1,4 @@
 # Cafe-Management-system
-https://advaitchavale.github.io/CMS-table-1/
+https://advaitchavale.github.io/Cafe-Management-system/
  check the site here 
  
